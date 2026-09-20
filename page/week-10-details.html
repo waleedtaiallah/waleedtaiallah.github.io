@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Output Devices</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/glightbox@3.1.0/dist/css/glightbox.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: MyResume - v4.7.0
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"></script>
+    <!-- Vendor JS Files -->
+    <script src="https://unpkg.com/glightbox@3.1.0/dist/js/glightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+
+    <!-- Template Main CSS File -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <main id="main">
+        <!-- ======= Portfolio Details Section ======= -->
+        <section id="portfolio-details" class="portfolio-details">
+            <div class="container">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-8">
+                        <div class="portfolio-details-slider swiper">
+                            <div class="swiper-wrapper align-items-center">
+
+                                <div class="swiper-slide">
+                                    <img style="height: 80vh;" src="../assets/img/progress/week-10/board_with_components.jpg">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img style="height: 80vh;" src="../assets/img/progress/week-10/board.jpg">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img style="height: 80vh;"
+                                        src="../assets/img/progress/week-10/layout.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img style="height: 80vh;" src="../assets/img/progress/week-10/speaker-breadboard.jpg">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="portfolio-info">
+                            <h3>Output Devices</h3>
+                            <ul>
+                                <li><strong>Date</strong>: November 9th 2022 - November 16th 2022</li>
+                            </ul>
+                        </div>
+                        <div class="portfolio-description">
+                            <h4>Audio Amplification for speaker output</h4>
+                            <p>Task: Make something that takes input</p>
+                            <p>For this weeks assignment I decided to continue my spectrum analyzer/ audio amplifier
+                                circuit by adding speakers to it.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Portfolio Details Section -->
+        <section id="resume" class="resume">
+            <div class="container" data-aos="fade-up">
+                <h3 class="resume-title">The Design</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                For this week I wanted to make my own audio amplification board, that interfaced
+                                directly with my main board from last week. I wanted to be able to push at least 2W
+                                through an 8 Ohm speaker. I also wanted to use the LM386 cause it was very easy to use
+                                and past experience with LM4781 has shown to be very annoying. After reading the
+                                <a href="https://www.ti.com/lit/gpn/lm386">datasheet </a> and discovering something
+                                called a bridged amplifier configuration, I came up with my own schematic for a very
+                                loud (for an LM386) audio amplifier.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-10/audio-amplifier-sh.png">
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="resume-title">Audio Amplifier</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                So to simplify this explanation and make it more clear I will only focus on one unit of
+                                it (half of the bridge configuration). All the bridge configuration means is that the
+                                input signal gets inverted by sending it to the inverting input of the lm386 and then
+                                added to the amplification by adding the output to the negative side of the speaker.
+                            </p>
+                            <p>
+                                So the first thing to know about using the LM386 amplifier is that it is very sensitive
+                                to noise. This is why you need to be very careful of how you place bypass capacitors. I
+                                went with the overkill solution of bypass caps and put 3 on each IC (CA_3, CA_8, CA_9)
+                                each of different values. Next I made sure to add another capacitor between the grounded
+                                input and the actual ground rail (pins 2 and 4). This may seem like it does nothing but
+                                it acts as a
+                                means to prevent radio frequencies from interfering with the IC (which is why its in the
+                                pico farad range). Next is the bypass cap for pin 7, this comes from the datasheet. It
+                                is there to stabilize amplification circuitry in the chip. Next we have bass boost (pins
+                                1 to 5), this makes the audio output sound very very nice. finally, we have two output
+                                filters a lowpass filter and a highpass filter.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 50vh;" src="../assets/img/progress/week-10/plus-unit-sh.png">
+                        </div>
+                    </div>
+                </div>
+                <h3 class="resume-title">Breadboard Testing</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                Before making this on an actual PCB, I decided to test my circuitry on a breadboard.
+                                This helped me visualize whats happening and also see what the audio would sound like
+                                and if I could improve it somehow. This was a very good idea, I found the source of a
+                                lot of noise and plugged it with capacitors and other things. This allowed me to refine
+                                my design and use better values for my capacitors and resistors.
+
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-10/speaker-breadboard.jpg">
+                        </div>
+                    </div>
+                </div>
+                <h3 class="resume-title">Layout and Milling</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                I wanted the board to fit in a small area and interface with the board from last week. I
+                                made it 50 mm by 50 mm. It takes 3 inputs (power, ground, and audio input), see last
+                                weeks documentation for more detail on this. I used big thick traces and made everything
+                                easy to solder. I routed my traces and created the footprint.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-10/layout.png">
+                        </div>
+                    </div>
+                </div>
+                <h3 class="resume-title">Assembly and Debugging</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                After routing my traces I milled out my board. This was very annoying! The initial board
+                                after it came out of the mill had a lot of problems, that I couldn't see. It was only
+                                after soldering all the components and finding short after short then removing the
+                                components, did I realize that the mill really messed up and left a bunch of small
+                                copper jumpers all over my board that I did not see. I resoldered the whole thing twice
+                                and still found out that there was another short between the audio input and ground.
+                                After trying to fix the issue and all the resoldering I decided to scrap the board. Meet
+                                the requirement this week by using the breadboard amplifier.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-10/board.jpg">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-10/board_with_components.jpg">
+                        </div>
+                    </div>
+                </div>
+                <h3 class="resume-title">We Have Audio</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <video style="width: fit-content;" width="720" height="480" controls>
+                            <source src="../assets/img/progress/final_project/electronics-design/speakers-audio.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <h3 class="resume-title">Next Steps</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                The next evolutions of this project will be to make it
+                                bluetooth compatible, add the second channel making it full stereo, design a 3D
+                                printed case, and deal with abundance of noise.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-9/main-pcb-mill.jpg">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-9/pcb-0.png">
+                        </div>
+                    </div>
+                </div>
+                
+        </section><!-- End Resume Section -->
+    </main><!-- End #main -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Template Main JS File -->
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

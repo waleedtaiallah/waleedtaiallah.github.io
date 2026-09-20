@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Application and Interface Programming</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/glightbox@3.1.0/dist/css/glightbox.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: MyResume - v4.7.0
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"></script>
+    <!-- Vendor JS Files -->
+    <script src="https://unpkg.com/glightbox@3.1.0/dist/js/glightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+
+    <!-- Template Main CSS File -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <main id="main">
+        <!-- ======= Portfolio Details Section ======= -->
+        <section id="portfolio-details" class="portfolio-details">
+            <div class="container">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-8">
+                        <div class="portfolio-details-slider swiper">
+                            <div class="swiper-wrapper align-items-center">
+
+                                <div class="swiper-slide">
+                                    <img style="height: 80vh;" src="../assets/img/progress/week-12/app.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img style="height: 80vh;" src="../assets/img/progress/week-12/mill-result.jpg">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img style="height: 80vh;" src="../assets/img/progress/week-12/result-solder-0.jpg">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="portfolio-info">
+                            <h3>Application and Interface Programming</h3>
+                            <ul>
+                                <li><strong>Date</strong>: November 23rd 2022 - November 30th 2022</li>
+                            </ul>
+                        </div>
+                        <div class="portfolio-description">
+                            <h4>CAN Bus logger app</h4>
+                            <p>Task: Make an app that interfaces with a board that I made</p>
+                            <p>For this weeks assignment I wanted to play around with CAN some more; and since I had to
+                                be diligent with my time because of Thanksgiving, I decided to make a CAN logger app.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Portfolio Details Section -->
+        <section id="resume" class="resume">
+            <div class="container" data-aos="fade-up">
+                <h3 class="resume-title">The Design</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                For this week I didn't have too much time to make anything crazy so I decided this would
+                                be a good idea to do some app development. I decided to use Kivy because it was a good
+                                framework for developing applications. Also I could eventually package what I make into
+                                an android app. In anycase, I started by making a simple outline for my app. I wanted it
+                                to do three simple things: start/stop serial reading and clear the log when it gets
+                                filled with data.
+                            </p>
+                            <p>
+                                To make any of this work I needed to be able to convert CAN to USB. After last week I
+                                had a CAN to SPI bridge. so all I needed was a USB to SPI bridge, I could do this with a
+                                samd21 and some Arduino code. I decided to implement the bridge in the form of another
+                                dev-board.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 40vh;" src="../assets/img/progress/week-12/21-dev.png">
+                            <img style="height: 40vh;" src="../assets/img/progress/week-12/mill-result.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="resume-title">The App</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <p>
+                            I watched a couple tutorials (<a
+                                href="https://www.youtube.com/watch?v=bMHK6NDVlCM&list=PLzMcBGfZo4-kSJVMyYeOQ8CXJ3z1k7gHn">here</a>)
+                            on Kivy and read through their docs (<a href="https://kivy.org/doc/stable/">here</a>). After
+                            doing so I wrote some simple code that runs the app and at the same time reads from serial
+                            every 16ms. The Kivy framework wont let you have blocking code, and when I tried threading
+                            it didnt really work cause it couldn't update graphical elements outside the scope of the
+                            app. I could have used multiprocessing with a Pipe or Queue however I only had a couple
+                            hours at this point and did not feel like debugging. Hence the reason I went with a simple
+                            timer which the app allows (used for animations). The dependencies for the app are PySerial
+                            and Kivy.
+                        </p>
+                        <a href="../assets/img/progress/week-12/app.zip" class="sim-btn btn-hover-new" download="code">
+                            <button type="button" class="btn btn-outline-primary">Download Code</button>
+                        </a>
+                        <img style=" margin-top: 20px; width: 50vw;" src="../assets/img/progress/week-12/app.png">
+                    </div>
+                    
+                </div>
+                <h3 class="resume-title">Full System</h3>
+                <div class="resume-item pb-0">
+                    <div class="row" style="justify-content: center; margin-top: 20px;">
+                        <p>
+
+                            For the full working system I have my CAN sender circuit from last week hooked up to my
+                            board from this week, which is connected to my computer. The CAN sender sends two CAN frames
+                            every second (random hex data). My logger circuit (on the bread board) reads it and sends it
+                            my computer.
+                        </p>
+
+                    </div>
+                    
+                    <div class="row" style="justify-content: center; margin-top: 20px;">
+                        <video style="width: fit-content;" width="800" height="600" controls>
+                            <source src="../assets/img/progress/week-12/video-result.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <h3 class="resume-title">Next Steps</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+
+                        <p>
+                            For the next steps of this project I want to add more functionality and create a better UI.
+                            I also want to create an Android App version of it once its done.
+                        </p>
+
+
+                    </div>
+                </div>
+
+        </section><!-- End Resume Section -->
+    </main><!-- End #main -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Template Main JS File -->
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

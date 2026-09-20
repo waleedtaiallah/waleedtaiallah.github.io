@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Networking Devices</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/glightbox@3.1.0/dist/css/glightbox.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: MyResume - v4.7.0
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"></script>
+    <!-- Vendor JS Files -->
+    <script src="https://unpkg.com/glightbox@3.1.0/dist/js/glightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+
+    <!-- Template Main CSS File -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <main id="main">
+        <!-- ======= Portfolio Details Section ======= -->
+        <section id="portfolio-details" class="portfolio-details">
+            <div class="container">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-8">
+                        <div class="portfolio-details-slider swiper">
+                            <div class="swiper-wrapper align-items-center">
+
+                                <div class="swiper-slide">
+                                    <img style="height: 80vh;" src="../assets/img/progress/week-11/khan_layout.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img style="height: 80vh;" src="../assets/img/progress/week-11/result-0.jpg">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img style="height: 80vh;" src="../assets/img/progress/week-11/khan_sch.png">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="portfolio-info">
+                            <h3>Networking</h3>
+                            <ul>
+                                <li><strong>Date</strong>: November 16th 2022 - November 23rd 2022</li>
+                            </ul>
+                        </div>
+                        <div class="portfolio-description">
+                            <h4>CAN bus testing</h4>
+                            <p>Task: Make something that communicates</p>
+                            <p>For this weeks assignment I wanted to play around with CAN transceivers. This is so I can
+                                get familiarity with CAN for future projects and my final project</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Portfolio Details Section -->
+        <section id="resume" class="resume">
+            <div class="container" data-aos="fade-up">
+                <h3 class="resume-title">The Design</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                For this week I didn't have too much time for debugging, so I decided to take it light
+                                and make a PCB that gives me some insight into how CAN communication works. I just
+                                wanted one board to turn on an LED on a second board using CAN communication.
+                                I also wanted this PCB to be powered off of a 9V battery to make this experiment
+                                portable. In addition I wanted to be able to turn my board on and switch it off.
+                                After getting my schematic in I routed all my traces and made a simple board layout. For
+                                the microcontroller I needed something that would compile the <a
+                                    href="https://github.com/autowp/arduino-mcp2515/blob/master/mcp2515.cpp">library</a>
+                                for the transceiver, which I bought off of <a
+                                    href="https://www.amazon.com/Comidox-MCP2515-Receiver-Controller-Development/dp/B07J9KZ4L4/ref=sr_1_3?crid=V4I0S3H7BCLP&keywords=mcp2515&qid=1669170664&sprefix=mcp2515%2Caps%2C64&sr=8-3">
+                                    amazon </a>. The transceiver was designed to communicate with MCU's using SPI. This
+                                makes it great for Arduino and DIY projects. The library is also SAMD compatible, making
+                                it perfect for a relaxing week.
+                            </p>
+                            <p>
+                                After getting the schematic done I layed out my board and routed all the traces. It came
+                                out in a nice 40mm by 45mm form factor.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 40vh;" src="../assets/img/progress/week-11/khan_sch.png">
+                            <img style="height: 40vh;" src="../assets/img/progress/week-11/khan_layout.png">
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="resume-title">Assembly</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <p>
+                            Because I wanted to relax more I decided to film a nice 3 hr relaxing timelapse. Here you
+                            can see me solder all the components I started with the smaller pitch components and went
+                            up. I made sure to check everything for shorts. You can see me doing this with a multimeter
+                            and using the microscope. I was able to find and fix them. I also practiced with the
+                            soldering wick to make things look cleaner.
+                        </p>
+
+
+                    </div>
+                    <div class="row" style="justify-content: center; margin-top: 20px;">
+                        <video style="width: fit-content;" width="400" height="600" controls>
+                            <source src="../assets/img/progress/week-11/soldering.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <h3 class="resume-title">Programming</h3>
+                <div class="resume-item pb-0">
+                    <div class="row" style="justify-content: center; margin-top: 20px;">
+                        <p>
+
+                            This part was relatively simple, I only had one major bug. I wrote two firmwares for this
+                            week. The sender sends frames on the CAN bus at a rate of 125kbs, sending 2 frames every
+                            second and flashes an LED everytime it sends a frame. The second if it receives a frame with
+                            no error message it will simply turn on an LED. There isn't much going on with this code it
+                            was just meant to be a first circle in my exploration of CAN. Although there wasn't much
+                            this was still fun to make and see work.
+                        </p>
+
+                    </div>
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col" style="text-align: center;">
+                            <a href="../assets/img/progress/week-11/khan_reciever_firmware.ino"
+                                class="sim-btn btn-hover-new" download="code">
+                                <button type="button" class="btn btn-outline-primary">Download Sender Code</button>
+                            </a>
+                        </div>
+                        <div class="col" style="text-align: center;">
+                            <a href="../assets/img/progress/week-11/khan_sender_firmware.ino"
+                                class="sim-btn btn-hover-new" download="code">
+                                <button type="button" class="btn btn-outline-primary">Download Receiver Code</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row" style="justify-content: center; margin-top: 20px;">
+                        <video style="width: fit-content;" width="800" height="600" controls>
+                            <source src="../assets/img/progress/week-11/working.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <h3 class="resume-title">Next Steps</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+
+                        <p>
+                            For the next steps of this project I want to be able to create a multi-node network of CAN
+                            transceiver all hooked on the same line this will give me the ability to communicate over
+                            distances with somewhat high noise.
+                        </p>
+
+
+                    </div>
+                </div>
+
+        </section><!-- End Resume Section -->
+    </main><!-- End #main -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Template Main JS File -->
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Input Devices</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/glightbox@3.1.0/dist/css/glightbox.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: MyResume - v4.7.0
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"></script>
+    <!-- Vendor JS Files -->
+    <script src="https://unpkg.com/glightbox@3.1.0/dist/js/glightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+
+    <!-- Template Main CSS File -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <main id="main">
+        <!-- ======= Portfolio Details Section ======= -->
+        <section id="portfolio-details" class="portfolio-details">
+            <div class="container">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-8">
+                        <div class="portfolio-details-slider swiper">
+                            <div class="swiper-wrapper align-items-center">
+
+                                <div class="swiper-slide">
+                                    <img style="height: 80vh;" src="../assets/img/progress/week-9/full-sh.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img style="height: 80vh;" src="../assets/img/progress/week-9/break-out-result.jpg">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img style="height: 80vh;"
+                                        src="../assets/img/progress/week-9/breadboard-result.jpg">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img style="height: 80vh;" src="../assets/img/progress/week-9/dual-serial.jpg">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="portfolio-info">
+                            <h3>Input Devices</h3>
+                            <ul>
+                                <li><strong>Date</strong>: November 2nd 2022 - November 9th 2022</li>
+                            </ul>
+                        </div>
+                        <div class="portfolio-description">
+                            <h4>Audio Mixer/Input for waveform display</h4>
+                            <p>Task: Make something that takes input</p>
+                            <p>For this weeks assignment I decided to continue my spectrum analyzer/ audio amplifier
+                                circuit by making an audio mixer for inputting stereo</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Portfolio Details Section -->
+        <section id="resume" class="resume">
+            <div class="container" data-aos="fade-up">
+                <h3 class="resume-title">The Design</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                Because this will be used in conjunction with my audio amplifier and also handle much of
+                                the spectrum analyzer computation. I decided to design it more like a motherboard with
+                                special functions. So for input it has UPDI, two audio channels (stereo), potentiometer
+                                for volume control, and power
+                                (micro-usb port). For outputs it must have a display (SPI), serial (FTDI) and power to
+                                the audio amplifiers.
+
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-9/full-sh.png">
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="resume-title">The Raw Input</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                Processing Audio is very complex and there are a lot of ways to do it. Because I wanted
+                                my initial input to be volume controlled with a potentiometer, and potentiometers tend
+                                to respond poorly to high frequency noise, I added a high pass filter on the input. This
+                                also has the added benefit of protecting my phone. The output of the filter then goes
+                                through a dual 10K potentiometer which acts as a voltage divider. This allows me to
+                                scale the input voltage which in turn will scale the output on the audio, resulting in
+                                volume control.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-9/raw_in_sh.png">
+                        </div>
+                    </div>
+                </div>
+                <h3 class="resume-title">Mixer</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                For the audio mixer and input to the microcontroller, I implemented a simple analog
+                                signal adder. This afforded me a few benefits. First it allows me to amplify the input
+                                signal so the microcontroller's ADC could be sensitive to the incoming audio. It also
+                                buffers the microcontroller input pin from the rest of my circuitry, creating better
+                                isolation. Lastly, due to the fact op-amps have high input impedance, I don't have to
+                                worry about my detection circuit diverting too much power from my speaker load. I added
+                                to biased both inputs so I could use a ground reference voltage instead of a negative
+                                supply.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-9/op_amp.png">
+                        </div>
+                    </div>
+                </div>
+                <h3 class="resume-title">Digital Logic</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                The last component is the digital side. I wanted the MCU to take in audio from the
+                                op-amp signal adder and output to an SPI LED display (MAX7219 display). In addition, I
+                                wanted ports for programming (UPDI) and debugging (FTDI). Putting all this together I
+                                created the next section of my schematic. I used PA4 for the audio signal input.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-9/digital-logic-sh.png">
+                        </div>
+                    </div>
+                </div>
+                <h3 class="resume-title">Full System</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                Putting all this together, I layed out my full schematic. After laying it out I
+                                routed
+                                my traces and created the footprint. Since this is just the input/motherboard of my
+                                full
+                                design (continued next week). I had to take into account how the audio amplifiers
+                                would
+                                be connected. I designed it such that all the pcb's together would form a cub, with
+                                the
+                                mother board being the base of the cube. This both looks cool and makes everything
+                                neatly packaged.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-9/full-sh.png">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-9/pcb-0.png">
+                        </div>
+                    </div>
+                </div>
+                <h3 class="resume-title">Making Dev Boards</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                Because I didn't feel like routing out the full board and watching it inevitably
+                                fail (As it has done so many times in the past). I saved myself future stress and
+                                headache, and created some break-out boards so I can test my circuit on a breadboard
+                                before I mill it
+                                out. I started by making a tiny breakout for the ATtiny1614. Not only do I meet the
+                                design requirement for the week, but its easier to replace one tiny board that takes
+                                5
+                                minutes to mill, rather than replace my main design. I added an LED to indicate that
+                                power was being delivered and a bypass capacitor to stabilize the input voltage. In
+                                order to program my dev board and debug, I made Quentin's dual serial FTDI
+                                programmer (<a
+                                    href="http://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/projects/dual_serial/#firmware_1">here</a>)
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-9/break-out-sh.png">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-9/break-out-pcb.png">
+                        </div>
+                    </div>
+                </div>
+                <h3 class="resume-title">Testing on a Breadboard</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                This way was definitely very smart cause I went through two MCU break-outs and LED
+                                screen making this design. I took my schematic split it in half (only doing mono
+                                instead of stereo) and put the full thing on a breadboard. I even had time to put
+                                the speaker on the breadboard. Testing it out on the breadboard allowed to me to
+                                change components quickly and fix noise straight on the source making a very clear
+                                sounding cheap amplifier. I added a bunch of bypass capacitors closer to the ICs,
+                                found the perfect resistor sizes for the op-amp adder. And was able to rapidly test
+                                my code.
+                        </div>
+                        <div class="col">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-9/break-out-result.jpg">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-9/dual-serial.jpg">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <img style="height: 50vh;" src="../assets/img/progress/week-9/breadboard-result.jpg">
+                        </div>
+                        <div class="col">
+                            <video style="width: fit-content;" width="600" height="400" controls>
+                                <source src="../assets/img/progress/week-9/breadboard.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="resume-title">Next Steps</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                Although, I didn't have enough time to solder the main speaker board. I did have
+                                enough time to mill it out. The next evolutions of this project will be to make it
+                                bluetooth compatible, add the second channel making it full stereo, design a 3D
+                                printed case, and manufacture the audio amplifiers.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-9/main-pcb-mill.jpg">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-9/pcb-0.png">
+                        </div>
+                    </div>
+                </div>
+        </section><!-- End Resume Section -->
+    </main><!-- End #main -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Template Main JS File -->
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

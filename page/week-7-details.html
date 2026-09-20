@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Embedded Programming</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/glightbox@3.1.0/dist/css/glightbox.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: MyResume - v4.7.0
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"></script>
+    <!-- Vendor JS Files -->
+    <script src="https://unpkg.com/glightbox@3.1.0/dist/js/glightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+
+    <!-- Template Main CSS File -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <main id="main">
+        <!-- ======= Portfolio Details Section ======= -->
+        <section id="portfolio-details" class="portfolio-details">
+            <div class="container">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-8">
+                        <div class="portfolio-details-slider swiper">
+                            <div class="swiper-wrapper align-items-center">
+                                <div class="swiper-slide">
+                                    <img style="height: 80vh;" src="../assets/img/progress/week-7/goal.jpg">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img style="height: 80vh;" src="../assets/img/progress/week-7/full_sch.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img style="height: 80vh;" src="../assets/img/progress/week-7/footprint.png">
+                                </div>
+
+
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="portfolio-info">
+                            <h3>Embedded Programming</h3>
+                            <ul>
+                                <li><strong>Date</strong>: October 19th 2022 - October 26th 2022</li>
+                            </ul>
+                        </div>
+                        <div class="portfolio-description">
+                            <h4>Taka Spectrum Analyzer/Audio Output</h4>
+                            <p>Task: Make a board do Something</p>
+                            <p>For this weeks assignment I decided to attempt making a Spectrum Analyzer and Audio
+                                Amplifier </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Portfolio Details Section -->
+        <section id="resume" class="resume">
+            <div class="container" data-aos="fade-up">
+                <h3 class="resume-title">Main Schematic </h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                In order to design my circuit I first sat down and set my design rules.
+                                <br>
+                                1. I want to be able to hear the music at least louder than my phone
+                                <br>
+                                2. I want to see the real time frequency spectrum of my audio
+                            </p>
+                            <p>
+                                After analyzing the datasheets of the SAMD21E (MCU), LM4781 (Amplifier ), and AD615
+                                (Op-amp), I came up with a Schematic that met all my design criteria. I breakdown each
+                                submodule of my design below.
+
+
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-7/full_sch.png">
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="resume-title">Audio Amplifier</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                For the audio amplifier, I am using the LM4781 and controlling the input volume with a
+                                10K potentiometer. This is a class AB amplifier which means that this IC applies both a
+                                voltage and current gain to my input signal. It is able to do this at ~80% efficiency,
+                                which means relatively little power is being used up by the IC compared to the speaker.
+                                It is capable of delivering up to 3W to a 4 Ohm speaker and 1.5 W to an 8 Ohm speaker
+                                (which is what I have).
+
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-7/lm4871.png">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-7/audio_amplifier.png">
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="resume-title">Audio Mixer</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                This module is in charge of taking the analog stereo input and converting it to mono
+                                output. Basically I need two take two analog inputs and add them togethers. To do this I
+                                made an analog adder using op-amps. This is a very common circuit and can be easily
+                                found with countless tutorials online (<a
+                                    href="https://www.electronics-tutorial.net/analog-integrated-circuits/op-amp-adder/">here</a>).
+                                I added a voltage bias so that my output signal was centered around 2.5 V and not 0V. I
+                                also added to capacitors on the input which then makes this circuit an active high pass
+                                filter (<a href="https://www.electronics-tutorials.ws/filter/filter_6.html">here</a>).
+                                This output then gets fed into the Audio Amplifier.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-7/audio_mixer.png">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                Once I had completed my design and had it vetted by Anthony and Alec (and also simulated
+                                some of it in circuit JS), I routed my traces and came up with a manageable pcb layout.
+                                Afterwards, I generated my gerber files and began milling out my board. This went
+                                smoothly. I then began soldering everything for the audio amplifier and mixer to see if
+                                it would work.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-7/result.jpg">
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3 class="resume-title">Debugging</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                My good luck has officially run out. something went terribly wrong. My Audio amplifier
+                                and mixer would simply not
+                                work. I checked for shorts and also used the multimeter to check that each IC was
+                                getting voltage correctly; there were no shorts and each IC was getting voltage. When I
+                                checked with the scope things got really weird. I would measure my audio signal and
+                                measuring from the aux I got a clean signal then measuring from the connector I would
+                                get
+                                a lot of noise. Furthermore, even though there was a signal on the speaker output It was
+                                a mystery as to why that output wasn't driving the speaker. I tried wiring the speaker
+                                in reverse and that did nothing. I was completely dumbfounded.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-7/debug-0.jpg">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-7/debug-1.jpg">
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3 class="resume-title">Regrouping</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                After I lost the battle for the week to this PCB, I decided to regroup and plan a
+                                coordinated attack. I realized that I was trying to do too much all at once. I needed to
+                                work in circles. For this week all I needed to do was program a board to do something. I
+                                decided to develop and easy breakout board and program that to drive an led screen
+                                matrix I obtained from EDS. This is the first circle in my audio amplifier/spectrum
+                                analyzer board which will go towards my final project. For this plan to work I first
+                                needed to design my breakout board and make sure it can work.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-7/break-out-pcb.png">
+                        </div>
+                    </div>
+                </div>
+                <h3 class="resume-title">Break-Out</h3>
+                <div class="resume-item pb-0">
+
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                For the break-out I wanted something super simple. A board that was easy to make and
+                                contained a status LED for indicating if power was getting to the board. I quickly
+                                routed it out and milled it. It was very good that I did this cause the milling failed
+                                the first time, which is fine cause it takes five minutes to mill out. Once it was
+                                milled I soldered the components and checked for shorts. I was all good. I powered the
+                                board and programmed a simple HelloWorld print to serial, using an FTDI programmer.
+                            </p>
+                            <a href="../assets/img/progress/week-7/HelloWorld.ino" class="sim-btn btn-hover-new"
+                                download="code">
+                                <button type="button" class="btn btn-outline-primary">Download Hello World Code</button>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-7/break-out-result.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="resume-title">Display MAX7219</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                I wanted to display my FFT/Waveform on a sizeable screen, and drive it via the ATTiny.
+                                OLED screens were too small and bigger ones were just tv displays. The MAX7219 seemed
+                                like the way to go it was just the right size and could was quite versatile. This
+                                display could be driven using the u8g2 library which has extensive <a
+                                    href="https://github.com/olikraus/u8g2">documentation </a>. In order to get the
+                                credit for this week I read the documentation and wrote a simple script using the
+                                documentation and my breadboard to display some text. The display (MAX7219) communicates
+                                using a serial protocol without using the MOSI pin on the ATTiny1614. I hooked it up on
+                                the breadboard (schematic on the right) and programmed it using my code to display text. 
+                            </p>
+                            <a href="../assets/img/progress/week-7/Test_Screen.ino" class="sim-btn btn-hover-new"
+                                download="code">
+                                <button type="button" class="btn btn-outline-primary">Download Simple Text Code</button>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <img style="height: 30vh;" src="../assets/img/progress/week-7/breadboard-sh.png">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 20px;"> 
+                       
+                        <img style="height: 50vw;" src="../assets/img/progress/week-7/hello-screen.jpg">
+        
+                    </div>
+                </div>
+
+
+            </div>
+        </section><!-- End Resume Section -->
+    </main><!-- End #main -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Template Main JS File -->
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

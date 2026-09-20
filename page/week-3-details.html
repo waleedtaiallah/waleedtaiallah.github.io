@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Electronics Production</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/glightbox@3.1.0/dist/css/glightbox.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: MyResume - v4.7.0
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"></script>
+    <!-- Vendor JS Files -->
+    <script src="https://unpkg.com/glightbox@3.1.0/dist/js/glightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+
+    <!-- Template Main CSS File -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <main id="main">
+        <!-- ======= Portfolio Details Section ======= -->
+        <section id="portfolio-details" class="portfolio-details">
+            <div class="container">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-8">
+                        <div class="portfolio-details-slider swiper">
+                            <div class="swiper-wrapper align-items-center">
+
+                                <div class="swiper-slide">
+                                    <img style="height: 80vh;" src="../assets/img/progress/week-3/result.jpg">
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <img style="height: 80vh;"
+                                        src="../assets/img/progress/week-3/pcb_with_components.jpg">
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <img style="height: 80vh;" src="../assets/img/progress/week-3/programming.jpg">
+
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="portfolio-info">
+                            <h3>Electronics Production</h3>
+                            <ul>
+                                <li><strong>Date</strong>: September 21st 2022 - September 28th 2022</li>
+                            </ul>
+                        </div>
+                        <div class="portfolio-description">
+                            <h4>Making a D11C Programmer</h4>
+                            <p>Task: manufacture a Programmer</p>
+                            <p>For this weeks assignment I needed to manufacture a PCB Programmer, I was able to
+                                complete this task quite quickly, giving me enough time to make another one using a
+                                different process</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Portfolio Details Section -->
+        <section id="resume" class="resume">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Electronics Production</h2>
+                </div>
+                <h3 class="resume-title">Group Assignment: Characterizing the Mill</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                For our group assignment this week we had to get the design constraints of our mill. The
+                                reason we have to do this is because we need to see what the minimum trace size and
+                                clearance has to be in order for us to mill out our PCBs. We started by making a test
+                                PCB that has varying trace sizes and clearances and lets us identify the proper
+                                constraints for our Programmer PCB and future PCBs. We found that our traces and minimum
+                                clearance should be 16 mill with a 1/64" endmill. Anything below this could be done but
+                                would require a different drill bit. 
+
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 200px;" src="../assets/img/progress/week-3/group_assignment.jpg">
+                            
+                        </div>
+
+
+                    </div>
+                </div>
+                <h3 class="resume-title">Generating the Gerber Files</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                The first step in making any PCB on the mill is we need to generate our gerber board
+                                files. To do this I took the png images from the cba website (
+                                <a
+                                    href="http://academy.cba.mit.edu/classes/embedded_programming/SWD/hello.CMSIS-DAP.10.D11C.traces.png">here</a>
+                                and <a
+                                    href="http://academy.cba.mit.edu/classes/embedded_programming/SWD/hello.CMSIS-DAP.10.D11C.interior.png">
+                                    here</a>)
+                                and ran it through KiCAD 6.0's image converter. The image converter outputs a text file
+                                that you can modify to make into a footprint on any layer (<a
+                                    href="https://youtu.be/DQ6Ta2K9pZk">this </a> online guide has more
+                                details on the process). Once you modified the proper file you should be left with a
+                                foot print you can import into KiCAD.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 200px;" src="../assets/img/progress/week-3/edge-cuts.png">
+                            <img style="height: 200px;" src="../assets/img/progress/week-3/traces.png">
+                            <img style="height: 200px;" src="../assets/img/progress/week-3/kicad.png">
+                        </div>
+
+
+                    </div>
+                </div>
+                <h3 class="resume-title">Milling out the PCB</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                To mill out this PCB I used the Bantom mill in EDS. This mill is really good for
+                                prototyping, however it has some limits. The software that comes with the mill only
+                                allows you to change the toolhead 3 times. So if your project requires a wide variety of
+                                bits, or you just want to save speed (1/64, 1/32, 1/100, 1/8), like I do for this
+                                programmer, then you have to do some clever workarounds. First when I inputted my board
+                                (which neal gave us) I
+                                saw a lot of red which means you need to change the toolhead to mill it. After I changed
+                                the toolhead to 1/64 the red was still there. So then I did what any sane person would
+                                do I lied to the computer and told it that I had the 1/100" toolhead, when in fact it
+                                did
+                                not. However, now I had another problem the computer was telling me It would take an
+                                hour to mill out all the traces. To get around this I had it go through the first part
+                                of the job with the 1/64" and 1/100" (actually 1/64") bit then canceled the job and then
+                                restarted the file by telling the software to cut the 1/8" and 1/32" traces.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <video height="300" controls>
+                                <source src="../assets/img/progress/week-3/mill.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="resume-title">Soldering The Components</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                Unfortunately all the time I saved milling was immediately spent soldering. I was
+                                waiting a long time for a Soldering station to open in EDS so I decided to take one of
+                                the bigger irons and some leaded solder and go at it by hand. It took about 45 minutes
+                                however I didn't do the greatest job. Next time I'll use solder paste/flux. After I got
+                                the
+                                soldering done I checked for shorts with a multimeter. I corrected the only short I
+                                found by using the solder suction. Then, I was left with a nice finished PCB.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 200px;" src="../assets/img/progress/week-3/result.jpg">
+                            <img style="height: 200px;" src="../assets/img/progress/week-3/pcb_with_components.jpg">
+                        </div>
+                    </div>
+                </div>
+                <h3 class="resume-title">Programming The Board</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                This was the fun part seeing if it worked. To make my piece of copper a board I needed
+                                to program in the firmware to the microcontroller. To do this we needed to find a
+                                programmer compatible with our board type. We ended up using the Atmel CMSIS Programmer.
+                                I plugged it in the SWD input on my board then ran edgb on my machine and I turned my
+                                copper into a programmer. Then to test it I used my board to program another board, and
+                                it worked.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 200px;" src="../assets/img/progress/week-3/programming.jpg">
+
+                        </div>
+                        <div class="col">
+                            <img style="height: 200px;" src="../assets/img/progress/week-3/verification.png">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Resume Section -->
+    </main><!-- End #main -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Template Main JS File -->
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

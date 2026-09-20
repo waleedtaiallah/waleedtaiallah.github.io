@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Electronics Design</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/glightbox@3.1.0/dist/css/glightbox.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: MyResume - v4.7.0
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"></script>
+    <!-- Vendor JS Files -->
+    <script src="https://unpkg.com/glightbox@3.1.0/dist/js/glightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+
+    <!-- Template Main CSS File -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <main id="main">
+        <!-- ======= Portfolio Details Section ======= -->
+        <section id="portfolio-details" class="portfolio-details">
+            <div class="container">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-8">
+                        <div class="portfolio-details-slider swiper">
+                            <div class="swiper-wrapper align-items-center">
+
+                                <div class="swiper-slide">
+                                    <img style="height: 80vh;" src="../assets/img/progress/week-5/mill-result.jpg">
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <img style="height: 80vh;" src="../assets/img/progress/week-5/hello-neil.png">
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <img style="height: 80vh;" src="../assets/img/progress/week-5/schematic-v1.png">
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <img style="height: 80vh;" src="../assets/img/progress/week-5/final-board.jpg">
+
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="portfolio-info">
+                            <h3>Electronic Design</h3>
+                            <ul>
+                                <li><strong>Date</strong>: October 6th 2022 - October 12th 2022</li>
+                            </ul>
+                        </div>
+                        <div class="portfolio-description">
+                            <h4>Making a PCB with a OLED Display</h4>
+                            <p>Task: Design a version of the Echo Hello World Board with at least a button and LED</p>
+                            <p> For this weeks assignment I decided I wanted to design a PCB for my final project. This
+                                PCB will act as the audio display for music and will sit on the dashboard of the ATV.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Portfolio Details Section -->
+        <section id="resume" class="resume">
+            <div class="container" data-aos="fade-up">
+                <h3 class="resume-title">The Base Design</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                Before I started I had to figure out what components I want to use. I first started with
+                                the MCU (MicroController); I picked the ATiny1614 this MCU has 20hz clock and can be
+                                powered with either 3.3V or 5V supply. Next I chose the OLED screen, I found a standard
+                                <a
+                                    href="https://www.amazon.com/PEMENOL-Display-0-96inch-Raspberry-Microcontroller/dp/B07F3KY8NF">0.96inch
+                                    SSD1306 OLED</a> in the lab which Anthony was kind enough to give me. Next I needed
+                                to configure a Serial Output port and a Programming port. Reading the datasheet for the
+                                ATtiny1614 I found that I can program the board through UPDI and read Serial via a
+                                standard serial port. Since UPDI is just serial with RX and TX tied together to
+                                program all I need is a USB to serial programmer which we have at the EDS lab. Utilizing
+                                this information I was able to design a schematic. I added a small button which can be
+                                configured to do something later.
+                        </div>
+                        <div class="col">
+                            <img style="height: 200px;" src="../assets/img/progress/week-5/screen.jpg">
+                            <img style="height: 200px;" src="../assets/img/progress/week-5/schematic-v1.png">
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="resume-title">Routing the Traces and Milling the Board</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                After laying out the schematic and checking all the pins I began routing the traces.
+                                Before I started I set the constraints of our machine into my design, from a couple of
+                                weeks ago this was found to be 16 mil trace clearance and width. Once the design rules
+                                were set I was able to start routing traces.
+                                This was fairly annoying, at first I tried to do it with as little 0 Ohm jumpers as
+                                possible. However, I soon realized how futile this is and embraced the jumpers. I ended
+                                up with only 2 jumpers. I added a ground pour which is nice cause all the grounds would
+                                be connected and I end up with less to mill out.
+                            </p>
+                            <p>
+                                Once I routed all the traces I ran it through the DRC (Design Rules Checker ) to check
+                                everything was within the constraints. The results came back with no significant errors
+                                (had 3 for the jumpers). Then I generated the gerber files and sent it to the mill to be
+                                milled out. The results were great I didn't even need to sand the board like last time.
+                                I used 1/64" PCB conservative, 1/32" flat end mill, and 1/8" flat end mill to mill out
+                                the board.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 200px;" src="../assets/img/progress/week-5/pcb-v1.png">
+                            <img style="height: 200px;" src="../assets/img/progress/week-5/mill-result.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="resume-title">Soldering and Placing the Components</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                I'm glad to say that I really learned my lesson from last time. I was patient and waited
+                                for a proper station to open up and used flux with only a tiny amount of solder. This
+                                time around my soldering came out quite well. However, my nice soldering job was soon
+                                overshadowed by a few shorts on my board. I removed the components from my board only to
+                                realize it actually wasn't my soldering it was just a tiny piece of copper left over
+                                from the mill. Something that I would have caught if I sanded the board. Lesson learned
+                                again.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 200px;" src="../assets/img/progress/week-5/final-board.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="resume-title">Programming the Board with Echo Hello World</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                Now for the real test. To prove that my design met the bare minimum of success. I needed
+                                to program it with the Echo Hello World ino <a
+                                    href="http://academy.cba.mit.edu/classes/embedded_programming/t1614/hello.t1614.echo.ino">file</a>.
+                                To this I first configured my Arduino IDE to be able program the ATtiny MCUs. I followed
+                                the instructions laid out by our well versed TA Anthony. First I opened up my Arduino
+                                IDE and went to <i>File > Preferences > Additional Board Managers</i> and added this
+                                link <a href="http://drazzy.com/package_drazzy.com_index.json">
+                                    http://drazzy.com/package_drazzy.com_index.json </a>. Then I went to <i>Tools >
+                                    Board > Boards Manager</i> and Typed ATtinyCore and downloaded the manager by
+                                SpenceKonde. Then I reloaded my IDE and went to <i> Tools </i> and selected my board and
+                                chip which is the ATTiny1614. I also selected the Programmer to be "Serial UPDI - SLOW".
+                                After configuring the IDE and connecting my board though the UPDI port. I compiled and
+                                uploaded the echo sketch successfully. Then I plugged the programmer into the FTDI port
+                                on my board and was able to send and receive responses. Finally, my board works.
+
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img style="height: 200px;" src="../assets/img/progress/week-5/serial-updi-result.jpg">
+                            <img style="height: 400px;" src="../assets/img/progress/week-5/hello-neil.png">
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="resume-title">Programming the Board with my Custom Display Firmware</h3>
+                <div class="resume-item pb-0">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                After having a successful initial test I was feeling confident enough to push my board
+                                to the limit and see if everything is working. So I wrote my custom firmware to change
+                                the OLED screen to black when the button is pressed and white otherwise. Small
+                                disclaimer I downloaded the Adafruit GFX and SSD1306 Arduino Libraries (<i>Tools > Manage Libraries</i>). And Since the
+                                pins I used for I2C were hardware I2C I just needed to compile the code and upload. 
+                            </p>
+                            <p>
+                                <a href="../assets/img/progress/week-5/firmware.ino" class="sim-btn btn-hover-new" download="code">
+                                  <button type="button" class="btn btn-outline-primary">Download Code</button>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col">
+                            <video height="400" controls>
+                                <source src="../assets/img/progress/week-5/video_result.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Resume Section -->
+    </main><!-- End #main -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Template Main JS File -->
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
